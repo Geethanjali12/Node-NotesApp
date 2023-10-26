@@ -39,7 +39,7 @@ const notesController = {
         try {
             const deleteNote = await note.findByIdAndDelete(req.params.id);
             if (deleteNote) {
-                res.json(deletedNote);
+                res.json(deleteNote);
             } else {
                 res.status(404).json({ error: 'Note not found' });
             }
